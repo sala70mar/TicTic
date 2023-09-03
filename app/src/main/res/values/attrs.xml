@@ -1,0 +1,27 @@
+<resources>
+    <declare-styleable name="UnderLineView">
+        <attr name="text" format="reference|string" />
+        <attr name="textColor" format="reference|integer" />
+<!--        <attr name="lineColor" format="reference|integer" />-->
+        <attr name="select" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleDivisionView">
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="dividerSpace" format="integer"/>
+        <attr name="counts" format="integer"/>
+        <attr name="strokeLineColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="Cookie">
+        <attr name="cookieTitleColor" format="color"/>
+        <attr name="cookieMessageColor" format="color"/>
+        <attr name="cookieActionColor" format="color"/>
+        <attr name="cookieBackgroundColor" format="color"/>
+
+        <attr name="cookieTitleSize" format="dimension"/>
+        <attr name="cookieMessageSize" format="dimension"/>
+        <attr name="cookieActionSize" format="dimension"/>
+        <attr name="cookiePadding" format="dimension"/>
+    </declare-styleable>
+</resources>

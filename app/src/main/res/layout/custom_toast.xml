@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/ractengle_less_round_solid_darkgray"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    android:layout_marginVertical="@dimen/_8sdp"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:paddingVertical="@dimen/_8sdp"
+    android:layout_centerVertical="true"
+    android:id="@+id/custom_toast_container">
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:gravity="center"
+        android:textSize="@dimen/_11sdp"
+        android:id="@+id/tvMessage"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
+

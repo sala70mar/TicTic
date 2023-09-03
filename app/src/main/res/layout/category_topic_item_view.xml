@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <RelativeLayout
+       android:layout_marginTop="@dimen/_6sdp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:paddingHorizontal="@dimen/_12sdp"
+           android:id="@+id/tabTag"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentEnd="true"
+           android:gravity="start|center_vertical"
+           android:orientation="horizontal"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+
+           <RelativeLayout
+               android:id="@+id/tabInnerTag"
+               android:layout_width="@dimen/_26sdp"
+               android:layout_height="@dimen/_26sdp">
+
+               <com.facebook.drawee.view.SimpleDraweeView
+                   android:id="@+id/ivTag"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerInParent="true"
+                   app:placeholderImage="@drawable/image_placeholder" />
+
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_centerInParent="true"
+                   android:background="@drawable/ic_img_frame_white" />
+
+           </RelativeLayout>
+
+           <TextView
+               android:layout_gravity="center"
+               android:id="@+id/tvTag"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_6sdp"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_11sdp"
+               android:ellipsize="end"
+               android:maxLines="1"
+               android:text=""
+               android:textStyle="bold" />
+
+       </LinearLayout>
+
+       <com.google.android.material.chip.ChipGroup
+           android:id="@+id/chipGroup"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/tabTag"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="@dimen/_12sdp"
+           android:foregroundGravity="center"
+           android:paddingHorizontal="@dimen/_12sdp"
+           app:chipSpacing="@dimen/_8sdp"
+           app:lineSpacing="@dimen/_8sdp"
+           app:singleSelection="true" />
+
+   </RelativeLayout>
+
+</layout>

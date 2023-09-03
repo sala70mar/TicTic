@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ractengle_less_round_solid_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_28sdp"
+        android:id="@+id/text"
+        android:text="@string/title"
+        android:maxLines="1"
+        android:elevation="@dimen/_2sdp"
+        android:layout_margin="@dimen/_4sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@android:color/transparent"
+        tools:context=".activitesfragments.profile.EditProfileViewRuleSheetF">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/d_round_top_corners_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/titleTab"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/d_bottom_gray_line">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/profile_views"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:src="@drawable/ic_cross"
+                    app:tint="@color/black" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/titleTab"
+                android:layout_centerHorizontal="true"
+                android:alpha="1"
+                android:id="@+id/tabshowNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/recyclerTab"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/tabProfileViewHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_38sdp">
+
+                        <LinearLayout
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/switchProfileViewHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:gravity="start|center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="viewStart"
+                                android:includeFontPadding="false"
+                                android:text="@string/profile_view_history"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_13sdp"
+                                android:textStyle="normal"
+                                android:gravity="center_vertical"
+                                tools:ignore="RtlCompat" />
+
+
+                        </LinearLayout>
+
+
+                        <Switch
+                            android:id="@+id/switchProfileViewHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:theme="@style/CustomAppTheme"
+                            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/recyclerTab"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/tabAddAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_22sdp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textAllCaps="false"
+                        android:text="@string/profile_view_rule_description"
+                        android:textColor="@color/darkgray"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="normal"
+                        android:gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/d_round_top_corners_black"
+    android:orientation="vertical">
+
+
+   <LinearLayout
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <Button
+           android:id="@+id/beauty_close_button"
+           android:layout_width="52dp"
+           android:layout_height="52dp"
+           android:layout_gravity="end"
+           android:background="@drawable/close_button_default" />
+
+       <TextView
+           android:id="@+id/beauty_level_info"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:paddingLeft="7dp"
+           android:paddingRight="7dp"
+           android:visibility="gone"
+           android:layout_marginBottom="2dp"
+           android:background="@drawable/beauty_level_info_bg"
+           android:gravity="center"
+           android:textColor="@android:color/black"
+           android:textSize="13sp"
+           android:textStyle="bold" />
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:clickable="false"
+           android:orientation="vertical">
+
+           <RelativeLayout
+               android:id="@+id/beauty_level_layout"
+               android:layout_width="match_parent"
+               android:layout_height="52dp"
+               android:layout_marginBottom="17dp"
+               android:background="#00000000"
+               android:gravity="center_vertical"
+               android:orientation="horizontal">
+
+               <Button
+                   android:id="@+id/beauty_init_button"
+                   android:layout_width="52dp"
+                   android:layout_height="52dp"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginEnd="3dp"
+                   android:background="@drawable/init_btn_default" />
+
+               <Button
+                   android:id="@+id/beauty_comparison_button"
+                   android:layout_width="52dp"
+                   android:layout_height="52dp"
+                   android:layout_toStartOf="@id/beauty_init_button"
+                   android:background="@drawable/comparison_btn_default" />
+
+               <com.qboxus.tictic.activitesfragments.argear.widget.CustomSeekBar
+                   android:id="@+id/beauty_seekbar"
+                   android:layout_width="match_parent"
+                   android:layout_height="52dp"
+                   android:layout_marginStart="16dp"
+                   android:layout_marginEnd="123dp"
+                   android:max="100"
+                   android:maxHeight="2dp"
+                   android:minHeight="2dp"
+                   android:progress="0"
+                   android:progressDrawable="@drawable/beauty_seekbar_selector"
+                   android:secondaryProgress="0"
+                   android:theme="@style/MySeekBar2"
+                   android:thumb="@drawable/sb_thumb" />
+
+           </RelativeLayout>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/beauty_items_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/beauty_level_layout" />
+
+       </RelativeLayout>
+
+
+   </LinearLayout>
+
+</RelativeLayout>

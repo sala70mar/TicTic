@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:paddingVertical="@dimen/_4sdp"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_70sdp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivUploadPhoto"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_centerInParent="true"
+            app:placeholderImage="@drawable/ic_upload_photo" />
+
+        <ImageView
+            android:id="@+id/ivDeletePhoto"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:src="@drawable/ic_cross_red" />
+
+        <ImageView
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:src="@drawable/ic_swipe_round" />
+
+    </RelativeLayout>
+</layout>

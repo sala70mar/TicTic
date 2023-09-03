@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainHomeContainerId">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/toolbar">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/user_image"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                app:actualImageScaleType="centerCrop"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/ic_user_icon"
+                fresco:roundAsCircle="true"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_centerVertical="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spaces"
+                android:layout_toEndOf="@+id/user_image"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+        </RelativeLayout>
+
+         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+              android:id="@+id/refreshLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true"
+              android:layout_below="@+id/toolbar"
+              android:layout_marginTop="@dimen/_5sdp">
+
+                  <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:id="@+id/dataLayout"
+                                    android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginTop="@dimen/_5sdp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/happening_now"
+                                        android:layout_centerVertical="true"
+                                        android:textSize="@dimen/_18sdp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:layout_marginStart="@dimen/_15sdp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/space_going_on_right_now"
+                                        android:layout_centerVertical="true"
+                                        android:textSize="@dimen/_14sdp"
+                                        android:textColor="@color/darkgray"
+                                        android:layout_marginStart="@dimen/_15sdp"/>
+
+                                </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:nestedScrollingEnabled="true"
+                                android:paddingHorizontal="@dimen/_6sdp"
+                                android:paddingBottom="@dimen/_80sdp"
+                                android:clipToPadding="false"  />
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_centerInParent="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/nodataLayout"
+                                    android:paddingTop="@dimen/_32sdp"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:paddingEnd="@dimen/_20sdp"
+                                    android:visibility="gone">
+
+
+                                    <TextView
+                                        android:id="@+id/tvNoData"
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:layout_marginEnd="@dimen/_12sdp"
+                                        android:text="There is no space is live now!"
+                                        android:textSize="@dimen/_11sdp"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tabStartRoom"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/d_round_mic_background"
+                    android:gravity="center"
+                    android:elevation="@dimen/_4sdp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        app:srcCompat="@drawable/ic_create_space" />
+
+                </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    </FrameLayout>
+</layout>

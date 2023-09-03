@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/d_top_left_right_radius_white"
+            android:id="@+id/mainRoomContainer">
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="top"
+                android:animateLayoutChanges="true"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivRoomClose"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/ic_arrow_bottom" />
+
+                <RelativeLayout
+                    android:id="@+id/tabLeaveQueitly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:animateLayoutChanges="true"
+                    android:paddingEnd="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/ivLeaveQueitly"
+                        android:layout_width="@dimen/_23sdp"
+                        android:layout_height="@dimen/_23sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_quit" />
+
+                    <TextView
+                        android:id="@+id/tvLeaveQueitly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@+id/ivLeaveQueitly"
+                        android:text="@string/leave_quietly"
+                        android:textColor="@color/redColor"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        <FrameLayout
+            android:animateLayoutChanges="true"
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_above="@+id/sheetBottomBar">
+
+            <LinearLayout
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                   <RelativeLayout
+                     android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentStart="true"
+                           android:layout_centerVertical="true"
+                           android:layout_toStartOf="@+id/ivOption"
+                           android:orientation="vertical"
+                           android:paddingTop="@dimen/_10sdp"
+                           android:visibility="visible">
+
+                           <LinearLayout
+                               android:id="@+id/tabClubName"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_horizontal"
+                               android:layout_marginBottom="@dimen/_4sdp"
+                               android:gravity="center_vertical|start"
+                               android:orientation="horizontal"
+                               android:visibility="gone">
+
+                               <ImageView
+                                   android:layout_width="@dimen/_18sdp"
+                                   android:layout_height="@dimen/_18sdp"
+                                   android:layout_marginStart="@dimen/_4sdp"
+                                   android:src="@drawable/ic_house" />
+
+                               <TextView
+                                   android:id="@+id/tvClubName"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/username"
+                                   android:textColor="@color/black"
+                                   android:textSize="@dimen/_11sdp"
+                                   android:textStyle="normal" />
+                           </LinearLayout>
+
+                           <TextView
+                               android:id="@+id/roomTitle"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Room Title"
+                               android:textColor="@color/black"
+                               android:textSize="@dimen/_13sdp"
+                               android:textStyle="normal" />
+
+                       </LinearLayout>
+
+                       <ImageView
+                           android:id="@+id/ivOption"
+                           android:layout_width="@dimen/_32sdp"
+                           android:layout_height="@dimen/_32sdp"
+                           android:layout_alignParentTop="true"
+                           android:layout_alignParentEnd="true"
+                           android:padding="@dimen/_5sdp"
+                           android:rotation="90"
+                           android:scaleType="fitCenter"
+                           app:tint="@color/black"
+                           android:src="@drawable/ic_black_dots" />
+
+                   </RelativeLayout>
+
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="visible"
+                        android:id="@+id/recylerviewSpeaker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                        />
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:id="@+id/tabOtherUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:id="@+id/tvOtherUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/others_in_the_room"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="normal" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+
+                            android:id="@+id/recylerviewOtherUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:overScrollMode="never"
+                            android:paddingHorizontal="@dimen/activity_horizontal_margin"/>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+        </FrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/sheetBottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentBottom="true"
+                android:animateLayoutChanges="true"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/tabRoomChat"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:background="@drawable/ic_circle_bg_gray">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            app:tint="@color/black"
+                            android:src="@drawable/ic_message" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/ivRoomShare"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:background="@drawable/ic_circle_bg_gray">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            app:tint="@color/black"
+                            android:src="@drawable/ic_share" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabJoinUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/tabJoinProfileOne"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_img_frame_white"
+                            android:backgroundTint="@color/white" />
+
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivJoinProfileOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            app:placeholderImage="@drawable/image_placeholder" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tabJoinProfileTwo"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginStart="@dimen/_8sdp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_img_frame_white"
+                            android:backgroundTint="@color/white" />
+
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ivJoinProfileTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            app:placeholderImage="@drawable/image_placeholder" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/tabJoinCount"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:background="@drawable/ic_circle_bg_gray">
+
+                        <TextView
+                            android:id="@+id/tvJoinCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="+4"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/tabQueitly"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/ic_circle_bg_gray"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_quit" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tabRiseHandUser"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:background="@drawable/ic_circle_bg_gray"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivRiseHandUser"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            app:tint="@color/black"
+                            android:src="@drawable/ic_rise_hand_list" />
+
+
+                        <TextView
+                            android:id="@+id/tvRiseHandCount"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_14sdp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/button_rounded_background"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_6sdp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tabRaiseHand"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:background="@drawable/ic_circle_bg_gray">
+
+                        <ImageView
+                            android:id="@+id/ivRaiseHand"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            app:tint="@color/black"
+                            android:src="@drawable/ic_hand_black" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/tabMice"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:background="@drawable/ic_circle_bg_gray"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivMice"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            app:tint="@color/black"
+                            android:src="@drawable/ic_mice" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</layout>

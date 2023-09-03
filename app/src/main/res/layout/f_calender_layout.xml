@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/d_round_top_corners_white">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48.0dip">
+                    <ImageView
+                        android:id="@+id/back_of_calender"
+                        android:background="@null"
+                        android:layout_width="50.0dip"
+                        android:layout_height="32.0dip"
+                        android:src="@drawable/ic_cross"
+                        android:scaleType="fitStart"
+                        app:tint="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <TextView
+                        android:textSize="@dimen/_20sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <com.savvi.rangedatepicker.CalendarPickerView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btn_ok_calender"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:clipToPadding="false"
+                android:scrollbarStyle="outsideOverlay"
+                app:tsquare_dividerColor="@color/appColor"
+                app:tsquare_headerTextColor="@color/black"
+                android:background="@color/white"
+                app:tsquare_orientation_horizontal="false" />
+
+
+            <Button
+                android:id="@+id/btn_ok_calender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/btn_playlist_blur"
+                android:gravity="center"
+                android:text="@string/update"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</layout>

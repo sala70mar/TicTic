@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/playerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackColor"
+        android:clickable="false"
+        android:padding="0dp"
+        app:resize_mode="fixed_height"
+        app:show_timeout="1000"
+        app:shutter_background_color="@color/blackColor"
+        app:use_controller="false" />
+
+    <RelativeLayout
+        android:id="@+id/tabLayoutReaction"
+        android:adjustViewBounds="true"
+        android:layout_margin="@dimen/_33sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="240dp"
+            android:layoutDirection="ltr"
+            android:id="@+id/cameraLayout"
+            android:layout_gravity="center"
+            android:background="@color/blackColor" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+</layout>

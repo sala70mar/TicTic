@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000">
+
+        <TextView
+            android:id="@+id/add_text_done_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/_15sdp"
+            android:shadowColor="@color/darkgray"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/add_text_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:colorControlActivated="@color/whiteColor"
+            android:colorControlNormal="@color/whiteColor"
+            android:gravity="center|center_vertical"
+            android:inputType="textMultiLine"
+            android:singleLine="true"
+            android:textColorPrimary="@color/whiteColor"
+            android:textSize="40sp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/add_text_color_picker_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_text_done_tv"
+            tools:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/moreOptionLayout"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toTopOf="@+id/add_text_color_picker_recycler_view">
+
+
+            <ImageButton
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:id="@+id/txtDirectionBtn"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_direction_center"
+                android:background="@color/transparent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:id="@+id/fontRecyclerView"
+                android:layout_marginStart="@dimen/_10sdp"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_text_color_picker_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:background="@color/blackColor"
+            tools:layout_height="wrap_content"
+            tools:listitem="@layout/color_picker_item_list" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

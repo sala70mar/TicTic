@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="false">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:text="@string/username"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            app:placeholderImage="@drawable/ic_join_speaker" />
+
+    </LinearLayout>
+</layout>

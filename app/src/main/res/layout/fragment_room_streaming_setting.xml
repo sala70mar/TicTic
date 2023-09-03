@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".activitiesfragments.creategroup.RoomStreamingSettingF">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/ivTop"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/d_round_gray25" />
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:id="@+id/tabOther"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserShareRoom"
+                    android:gravity="start|center_vertical"
+                    android:textAlignment="viewStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:text="@string/share_room"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:id="@+id/tvUserReportRoomTitle"
+                    android:gravity="start|center_vertical"
+                    android:textAlignment="viewStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:text="@string/report_room_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+           <LinearLayout
+               android:visibility="gone"
+               android:paddingTop="@dimen/_10sdp"
+               android:paddingBottom="@dimen/_20sdp"
+               android:id="@+id/tabOwner"
+               android:paddingStart="@dimen/_12sdp"
+               android:paddingEnd="@dimen/_12sdp"
+               android:layout_marginTop="@dimen/_20sdp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tvShareRoom"
+                   android:gravity="start|center_vertical"
+                   android:textAlignment="viewStart"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_30sdp"
+                   android:text="@string/share_room"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_15sdp"
+                   android:textStyle="bold" />
+
+
+               <TextView
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:id="@+id/tvEndRoom"
+                   android:gravity="start|center_vertical"
+                   android:textAlignment="viewStart"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_30sdp"
+                   android:text="@string/end_room"
+                   android:textColor="@color/appColor"
+                   android:textSize="@dimen/_15sdp"
+                   android:textStyle="bold" />
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

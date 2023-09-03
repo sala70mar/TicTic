@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/blackColor"
+        tools:context=".activitesfragments.profile.SeeFullImageA">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivProfile"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImageScaleType="fitCenter"
+            app:placeholderImage="@drawable/ic_user_icon" />
+
+
+        <LinearLayout
+            android:padding="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                app:tint="@color/whiteColor"
+                android:src="@drawable/ic_cross" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

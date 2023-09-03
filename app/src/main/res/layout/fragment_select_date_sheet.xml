@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/d_round_top_corners_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:text="7 days"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:id="@+id/weekTxt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:padding="@dimen/_10sdp" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:text="Last 1 month"
+                    android:id="@+id/monthTxt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:text="Last 2 month"
+                    android:id="@+id/twomonthTxt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customBtn"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/custom"
+                    android:id="@+id/customTxt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/ic_arrow_end"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitEnd"
+                    android:layout_marginEnd="@dimen/_5sdp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_6sdp"
+                android:background="@color/lightgraycolor"/>
+
+            <RelativeLayout
+                android:id="@+id/tabCancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="false"
+                    android:text="@string/cancel_"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="normal"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

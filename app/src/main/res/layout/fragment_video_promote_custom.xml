@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".activitesfragments.profile.videopromotion.VideoPromoteCustomF">
+
+        <LinearLayout
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/btnNext">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_44sdp"
+                android:gravity="start|center_vertical"
+                android:text="@string/custom_audience"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_19sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="start|center_vertical"
+                android:paddingStart="0dp"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:text="@string/choose_custom_option_for_this_video"
+                android:textAlignment="viewStart"
+                android:textColor="@color/darkgray"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/etAudienceName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:hint="@string/audience_name"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:background="@drawable/d_bottom_gray_line"
+                android:inputType="textCapSentences"
+                android:textColor="@color/black"
+                android:textColorHint="@color/graycolor"
+                android:textSize="@dimen/_11sdp" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/tabGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_44sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:text="@string/gender"
+                        android:textStyle="bold"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvGenderAll"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/all"
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_selection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="@dimen/_11sdp" />
+
+
+                        <TextView
+                            android:id="@+id/tvFemale"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/female"
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/tvMale"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/male"
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/gainsboro" />
+
+
+
+            <RelativeLayout
+                android:id="@+id/tabAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="start|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:text="@string/age"
+                        android:textStyle="bold"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvAgeAll"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/all"
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_selection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="@dimen/_11sdp" />
+
+
+                        <TextView
+                            android:id="@+id/tvFirst"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/thirteen_saventeen"
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/tvSecond"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/eighteen_twentyfour"
+
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/tvThird"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/twentyfive_thirtyfour"
+
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center_vertical"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:id="@+id/tvForth"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/thirtyfive_fortyfour"
+
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/tvFifth"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/fortyfive_fiftyfour"
+
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:id="@+id/tvSixth"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|start"
+                            android:text="@string/fiftyfive_plus"
+
+                            android:textStyle="bold"
+                            android:background="@drawable/tab_ractengle_unselection"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/gainsboro" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/btn_promotion_blur"
+            android:clickable="true"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/_11sdp" />
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activitesfragments.profile.analytics.FollowersAnalyticsF">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollIndicators="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+
+                    <TextView
+                        android:id="@+id/dateRangeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="jan 01 - jan 08"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/selectDateLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/d_gray_border"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/daysTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Last 7 days"
+                            android:textColor="@color/black" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_followers"
+                        android:textColor="@color/black"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:id="@+id/followersExplainBtn"
+                        android:src="@drawable/ic_explaination"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:id="@+id/totalFollowerCount"
+                    android:textColor="@color/black"
+                    />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/follwersChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/followers_insights"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:id="@+id/insightsExplainBtn"
+                        android:src="@drawable/ic_explaination"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/noDataLayout"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_data"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/get_more_insights_once_you_get_some_followers"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_5sdp" />
+
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:fillViewport="true"
+                    android:scrollbars="none"
+                    android:visibility="gone"
+                    android:id="@+id/insightsLayout"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_220sdp"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/_5sdp"
+                            android:background="@drawable/d_gray_border">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/gender"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                android:id="@+id/gendertitle"
+                                android:textColor="@color/black"/>
+
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/genderPieChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/gendertitle"
+                                android:layout_above="@+id/bottomValues"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/bottomValues"
+                                android:layout_alignParentBottom="true">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            app:tint="@color/appColor"
+                                            android:src="@drawable/ic_circle"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0.0%"
+                                            android:textSize="@dimen/_15sdp"
+                                            android:textStyle="bold"
+                                            android:layout_marginStart="5dp"
+                                            android:textColor="@color/black"
+                                            android:id="@+id/malepercentagetxt"
+                                            android:layout_centerVertical="true"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/male"
+                                        android:textSize="@dimen/_11sdp"
+                                        android:textColor="@color/black"
+                                        android:layout_centerVertical="true"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="10dp"
+                                            android:layout_height="10dp"
+                                            app:tint="@color/pink_color_picker"
+                                            android:src="@drawable/ic_circle"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0.0%"
+                                            android:textSize="@dimen/_15sdp"
+                                            android:textStyle="bold"
+                                            android:layout_marginStart="5dp"
+                                            android:textColor="@color/black"
+                                            android:id="@+id/femalepercentagetxt"
+                                            android:layout_centerVertical="true"/>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/female"
+                                        android:textSize="@dimen/_11sdp"
+                                        android:textColor="@color/black"
+                                        android:layout_centerVertical="true"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_220sdp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:background="@drawable/d_gray_border">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/age"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                android:id="@+id/agetitle"
+                                android:textColor="@color/black"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:id="@+id/agePercentLayout"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_below="@id/agetitle"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_220sdp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:background="@drawable/d_gray_border">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/top_countries"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                android:id="@+id/countrytitle"
+                                android:textColor="@color/black"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:id="@+id/countryPercentLayout"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_below="@id/countrytitle"/>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_220sdp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:background="@drawable/d_gray_border">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/top_cities"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                android:id="@+id/citytitle"
+                                android:textColor="@color/black"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:id="@+id/cityPercentLayout"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_below="@id/citytitle"/>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</layout>
